@@ -9,9 +9,7 @@
   <div class="row">
     <div class="col-xs-12" ng-repeat="alert in alerts | limitTo: 4">
       <div class="thumbnail">
-        <a href="#">
-          <img class="col-xs-4" src='{{alert.image}}'>
-        </a>
+        <img class="col-xs-4" src='{{alert.image}}'>
         <div class="caption">
           <h3>{{alert.title}}</h3>
           <p>By <strong>{{alert.author}}</strong> {{alert.date}}</p>
