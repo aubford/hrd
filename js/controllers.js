@@ -16,6 +16,7 @@ app.controller('AlertsController', ['$scope', 'AlertFactory', function($scope, A
     AlertFactory.getAlerts().then(function(results){
         $scope.alerts = results.data
     })
+
 }])
 
 
@@ -23,13 +24,13 @@ app.controller('NewAlertController', ['$scope', 'AlertFactory', '$location', fun
     $scope.alert = {}
 
     $scope.newAlert = function(){
-      
-
-      var date = new Date()
-      $scope.alert.date = date
-      AlertFactory.setAlert($scope.alert).then(function(response){
-        $location.path('/#/alerts')
-      })
+      if(!$scope.frm.$invalid){
+        var date = new Date()
+        $scope.alert.date = date
+        AlertFactory.setAlert($scope.alert).then(function(response){
+          scope.$apply(function(){$location.path('/alerts')})
+        })
+      }
     }
 
     $scope.pageWhat = 'pageCases'

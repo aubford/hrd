@@ -1,6 +1,6 @@
 var app = angular.module('hrdApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.bootstrap'])
 
-		app.config(function($routeProvider) {
+		app.config(function($routeProvider, $locationProvider) {
 			$routeProvider
 				.when('/', {
 					templateUrl: '../partials/index.html',
@@ -19,4 +19,5 @@ var app = angular.module('hrdApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.boots
 					controller: 'NewAlertController'
 				})
 				.otherwise({redirectTo : '/'})
+			// $locationProvider.html5Mode(true)
 		})
