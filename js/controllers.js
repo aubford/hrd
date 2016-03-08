@@ -28,7 +28,7 @@ app.controller('NewAlertController', ['$scope', 'AlertFactory', '$location', fun
         var date = new Date()
         $scope.alert.date = date
         AlertFactory.setAlert($scope.alert).then(function(response){
-          scope.$apply(function(){$location.path('/alerts')})
+          $location.path('/alerts')
         })
       }
     }

@@ -3,21 +3,22 @@ var app = angular.module('hrdApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.boots
 		app.config(function($routeProvider, $locationProvider) {
 			$routeProvider
 				.when('/', {
-					templateUrl: '../partials/index.html',
+					templateUrl: 'partials/index.html',
 					controller: 'IndexController'
 				})
 				.when('/alerts', {
-					templateUrl: '../partials/alerts/alerts.html',
+					templateUrl: 'partials/alerts/alerts.html',
 					controller: 'AlertsController'
 				})
 				.when('/cases', {
-					templateUrl: '../partials/cases.html',
+					templateUrl: 'partials/cases.html',
 					controller: 'CasesController'
 				})
 				.when('/alerts/new', {
-					templateUrl: '../partials/alerts/new.html',
+					templateUrl: 'partials/alerts/new.html',
 					controller: 'NewAlertController'
 				})
 				.otherwise({redirectTo : '/'})
-			// $locationProvider.html5Mode(true)
+
+				$locationProvider.html5Mode(true)
 		})
