@@ -1,0 +1,37 @@
+@mainBlue : lighten(#095aa6, 30%);
+@mainGrey : lighten(grey, 35%);
+
+html {
+  overflow-y: scroll;
+}
+
+.brand {
+  display: inline;
+  height: 80px;
+  padding: 3px 0;
+}
+
+.navbar {
+  font-size: 20px;
+}
+
+.nav {
+  padding-left: 15px;
+}
+
+.welcome {
+  padding: 30px;
+  background-color: @mainBlue;
+  color: white;
+  h2 {
+    font-size: 37px;
+  }
+  p {
+    color: @mainGrey;
+    font-size: 18px;
+  }
+}
+
+.inline-block {
+  display: inline-block !important;
+}

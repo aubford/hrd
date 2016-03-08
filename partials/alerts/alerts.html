@@ -1,0 +1,27 @@
+<au-header></au-header>
+<div class="container">
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+        <a href="#/alerts/new" class="btn-block btn-lg btn btn-primary">Contribute an Alert</a>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-12" ng-repeat="alert in alerts | filter : main.search">
+      <div class="thumbnail">
+        <a href="#">
+          <img class="col-xs-4" src='{{alert.image}}'>
+        </a>
+        <div class="caption">
+          <h3>{{alert.title}}</h3>
+          <p>By <strong>{{alert.author}}</strong> {{alert.date | date : "medium"}}</p>
+          <p>{{alert.body}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

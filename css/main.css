@@ -1,0 +1,29 @@
+html {
+  overflow-y: scroll;
+}
+.brand {
+  display: inline;
+  height: 80px;
+  padding: 3px 0;
+}
+.navbar {
+  font-size: 20px;
+}
+.nav {
+  padding-left: 15px;
+}
+.welcome {
+  padding: 30px;
+  background-color: #52a7f6;
+  color: white;
+}
+.welcome h2 {
+  font-size: 37px;
+}
+.welcome p {
+  color: #d9d9d9;
+  font-size: 18px;
+}
+.inline-block {
+  display: inline-block !important;
+}
